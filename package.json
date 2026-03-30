@@ -4,17 +4,14 @@
   "description": "A WhatsApp Bot Created By FAIZAN-MD⁸⁷³ ",
   "main": "index.js",
   "engines": {
-    "node": ">=20.x",
-    "npm": ">=10.x"
+    "node": "20.x",
+    "npm": "10.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "pm2-start": "pm2 start index.js --name FAIZAN-MD",
-    "pm2-stop": "pm2 stop FAIZAN-MD",
-    "pm2-restart": "pm2 restart FAIZAN-MD"
+    "start": "node index.js"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "7.0.0-rc.6",
+    "@whiskeysockets/baileys": "6.7.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@dark-yasiya/scrap": "1.0.1",
@@ -42,7 +39,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^11.1.0",
     "google-tts-api": "^2.0.2",
-    "jimp": "^0.16.1",
+    "jimp": "0.16.1",
     "megajs": "^1.3.7",
     "moment-timezone": "^0.6.0",
     "mongoose": "^8.0.0",
