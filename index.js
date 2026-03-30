@@ -129,7 +129,7 @@ const {
           let sessdata = config.SESSION_ID;
           
           // Remove prefix if present
-          const prefixes = ['FAIZAN-MD~', 'BOSS-MD~', 'EMYOU~', 'BOT~'];
+          const prefixes = ['FAIZAN-MD~', 'ZAIDI-MD~', 'EMYOU~', 'BOT~'];
           for (const p of prefixes) {
               if (sessdata.includes(p)) {
                   sessdata = sessdata.split(p)[1];
