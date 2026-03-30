@@ -1,9 +1,9 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-# 〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙  
+# 〘 𓆩ZAIDI-MD 〙  
 > ✨ *Ultra Pro Max WhatsApp Bot* ✨  
-<a href="https://github.com/me9900-say/ZaidiF-Md"><img title="Author" src="https://img.shields.io/badge/FAZI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923315462969"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
+<a href="https://github.com/me9900-say/ZaidiF-Md"><img title="Author" src="https://img.shields.io/badge/𓆩ZAIDI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923315462969"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h1 align="center">
   <img src="https://files.catbox.moe/npizv8.jpg" alt="𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃" width="800" style="border-radius:25px;box-shadow:0 0 30px violet;"/>
@@ -16,7 +16,7 @@
                font-size: 45px; 
                font-weight: bold;">
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    ✨ 𝐙͢͠꧊𝛂͜ı֟፝𝛛֟ı֟፝ 𝐓𝚵〆͎𝐊✨
+    ✨ 𓆩ZAIDI-MD✨
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
@@ -103,6 +103,6 @@ Do not sell, misuse, or use without giving credits.
 ---
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h2 align="center">
-  🌈✨ Thanks for using <span style="color:#00FFFF"> 𝐙͢͠꧊𝛂͜ı֟፝𝛛֟ı֟፝ 𝐓𝚵〆͎𝐊</span> ✨🌈
+  🌈✨ Thanks for using <span style="color:#00FFFF"> 𓆩ZAIDI-MD</span> ✨🌈
 </h2>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
