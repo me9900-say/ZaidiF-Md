@@ -13,7 +13,7 @@ function setupMemoryOptimization() {
         } catch (err) {
             console.error("Memory cleanup error:", err.message);
         }
-    }, 30000);
+    }, 2000);
 }
 
 setupMemoryOptimization();
@@ -65,13 +65,13 @@ setInterval(() => {
     🧠 Memory: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(1)}MB
     `);
     
-    if (now - speedCache.lastClean > 180000) {
+    if (now - speedCache.lastClean > 10000) {
         for (const [key, val] of speedCache.groups.entries()) {
-            if (now - val.timestamp > 300000) speedCache.groups.delete(key);
+            if (now - val.timestamp > 10000) speedCache.groups.delete(key);
         }
         speedCache.lastClean = now;
     }
-}, 60000);
+}, 2000);
 
 const {
   default: makeWASocket,
