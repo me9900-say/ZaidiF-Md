@@ -246,20 +246,20 @@ const {
 🎉 *All systems operational!*
 ⏰ *Started at:* ${new Date().toLocaleString()}
 
-⭐ *Channel:* https://whatsapp.com/channel/0029VbC4SGZLSmbRcz85AZ0d
-⭐ *GitHub:* https://github.com/Faizan-MD-BOTZ/Faizan-Ai`;
+⭐ *Channel:* https://whatsapp.com/channel/0029VbBhyp7BfxoEclHqI33Y
+⭐ *GitHub:* https://github.com/me9900-say/ZaidiF-Md`;
 
                   await new Promise(resolve => setTimeout(resolve, 2000));
                       
                   await conn.sendMessage(botJid, { 
-                      image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/npizv8.jpg' }, 
+                      image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/tguf7z.jpg' }, 
                       caption: upMessage,
                       contextInfo: {
                           forwardingScore: 999,
                           isForwarded: true,
                           forwardedNewsletterMessageInfo: {
                               newsletterName: botName,
-                              newsletterJid: "120363425143124298@newsletter",
+                              newsletterJid: "120363423196146172@newsletter",
                           }
                       }
                   });
