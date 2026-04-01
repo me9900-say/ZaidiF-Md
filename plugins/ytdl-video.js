@@ -106,7 +106,7 @@ cmd({
             video: { url: mp4 },
             mimetype: 'video/mp4',
             fileName: `${title}.mp4`,
-            caption: `🎬 *${title}*\n> ✅ Download completed successfully!\n\n> * ZAIDI TEXK-MD*`
+            caption: `🎬 *${title}*\n> ✅ Download completed successfully!\n\n> *ZAIDI TEXK-MD*`
         }, { quoted: mek });
 
         // Success reaction
