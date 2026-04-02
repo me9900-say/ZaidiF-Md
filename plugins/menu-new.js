@@ -287,7 +287,7 @@ cmd({
             forwardingScore: 999,
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363416743041101@newsletter',
+                newsletterJid: '120363423196146172@newsletter',
                 newsletterName: botName,
                 serverMessageId: 143
             }
@@ -296,7 +296,7 @@ cmd({
         // ── Determine media type from config ──
         // Set MENU_VIDEO_URL in config for video, MENU_IMAGE_URL for image
         const videoUrl = config.MENU_VIDEO_URL || null;
-        const imageUrl = config.MENU_IMAGE_URL || 'https://i.ibb.co/Sw4pzTWC/IMG-20260124-WA0728.jpg';
+        const imageUrl = config.MENU_IMAGE_URL || 'https://files.catbox.moe/tguf7z.jpg';
 
         let sentMsg;
         try {
