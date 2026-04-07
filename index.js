@@ -38,8 +38,8 @@ const {
   const util = require('util')
   const { sms, downloadMediaMessage, AntiDelete } = require('./lib')
   const FileType = require('file-type');
-  const { File } = require('megajs')
   const { fromBuffer } = require('file-type')
+  const { File } = require('megajs')
   const bodyparser = require('body-parser')
   const os = require('os')
   const Crypto = require('crypto')
@@ -120,11 +120,19 @@ const {
 
         console.log('[⏳] Decoding Base64 session...');
 
-        const session = config.SESSION_ID.startsWith('FAIZAN-MD~')
-            ? config.SESSION_ID.replace("ZAIDI-MD~", "")
-            : config.SESSION_ID;
+        let session = config.SESSION_ID;
+        if (session.startsWith('ZAIDI-MD~')) {
+            session = session.replace("ZAIDI-MD~", "");
+        } else if (session.startsWith('FAIZAN-MD~')) {
+            session = session.replace("FAIZAN-MD~", "");
+        }
 
         const decoded = Buffer.from(session, 'base64');
+        
+        // Ensure sessions directory exists before writing
+        if (!fs.existsSync(sessionDir)) {
+            fs.mkdirSync(sessionDir, { recursive: true });
+        }
         fs.writeFileSync(credsPath, decoded);
         console.log('[✅] Session decoded & saved successfully');
         return JSON.parse(decoded.toString());
@@ -143,9 +151,7 @@ const {
       
       const creds = await loadSession();
       
-      const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, 'sessions'), {
-          creds: creds || undefined
-      });
+      const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, 'sessions'));
       
       const { version } = await fetchLatestBaileysVersion();
       
@@ -163,7 +169,7 @@ const {
           const { connection, lastDisconnect, qr } = update;
           
           if (connection === 'close') {
-              if (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut) {
+              if (lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
                   console.log('[🔰] Connection lost, reconnecting...');
                   setTimeout(connectToWA, 5000);
               } else {
@@ -636,7 +642,7 @@ const {
         }
         let type = await FileType.fromBuffer(buffer)
         let trueFileName = attachExtension ? (filename + '.' + type.ext) : filename
-        await fs.writeFileSync(trueFileName, buffer)
+        fs.writeFileSync(trueFileName, buffer)
         return trueFileName
       }
       
@@ -859,7 +865,7 @@ const {
       
       //=====================================================
       conn.getName = (jid, withoutContact = false) => {
-        id = conn.decodeJid(jid);
+        let id = conn.decodeJid(jid);
         withoutContact = conn.withoutContact || withoutContact;
         let v;
         if (id.endsWith('@g.us'))
