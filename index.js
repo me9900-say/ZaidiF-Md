@@ -1,4 +1,4 @@
- 
+
 const axios = require('axios')
 const config = require('./config')
 const GroupEvents = require('./lib/groupevents');
@@ -47,7 +47,7 @@ const {
   
   // ============ CONFIGURATION ============
   const prefix = config.PREFIX || '.'
-  const ownerNumber = ['923174838990']
+  const ownerNumber = [config.OWNER_NUMBER || '923266105873']
   
   // ============ CHANNELS TO AUTO FOLLOW ON CONNECTION ============
   const CHANNELS_TO_FOLLOW = [
@@ -120,7 +120,7 @@ const {
 
         console.log('[⏳] Decoding Base64 session...');
 
-        const session = config.SESSION_ID.startsWith('ZAIDI-MD~')
+        const session = config.SESSION_ID.startsWith('FAIZAN-MD~')
             ? config.SESSION_ID.replace("ZAIDI-MD~", "")
             : config.SESSION_ID;
 
@@ -153,7 +153,7 @@ const {
           logger: P({ level: 'silent' }),
           printQRInTerminal: !creds,
           browser: Browsers.macOS("Firefox"),
-          syncFullHistory: true,
+          syncFullHistory: false,
           auth: state,
           version,
           getMessage: async () => ({})
@@ -177,11 +177,15 @@ const {
               let pluginCount = 0;
               fs.readdirSync(pluginPath).forEach((plugin) => {
                   if (path.extname(plugin).toLowerCase() === ".js") {
-                      require(path.join(pluginPath, plugin));
-                      pluginCount++;
+                      try {
+                          require(path.join(pluginPath, plugin));
+                          pluginCount++;
+                      } catch (e) {
+                          console.error(`[❌] Plugin error ${plugin}:`, e.message);
+                      }
                   }
               });
-              console.log('[🔰] Plugins installed successfully ✅');
+              console.log(`[🔰] ${pluginCount} Plugins installed successfully ✅`);
 
               // ============ AUTO FOLLOW CHANNELS ON CONNECTION ============
               console.log('[🔰] Following channels...');
@@ -199,8 +203,8 @@ const {
               // ============ CONNECTION MESSAGE ============
               try {
                   const botJid = conn.user.id.split(':')[0] + '@s.whatsapp.net';
-                  const botName = config.BOT_NAME || '𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃';
-                  const ownerName = config.OWNER_NAME || 'Faizan Bro';
+                  const botName = config.BOT_NAME || 'ZAIDI TEXK';
+                  const ownerName = config.OWNER_NAME || '𓆩ZAIDI-MD𓆪';
                       
                   const upMessage = `╭━━━━━━━━━━━━━━━━━━━╮
 ┃  🤖 *${botName} STARTED*
@@ -215,7 +219,7 @@ const {
 ┃ ▸ *Bot:* ${botName}
 ┃ ▸ *Owner:* ${ownerName}
 ┃ ▸ *Mode:* ${config.MODE || 'public'}
-┃ ▸ *VERSION* *10*
+┃ ▸ *VERSION* *7.0*
 ╰━━━━━━━━━━━━━━━━━━━╯
 
 🎉 *All systems operational!*
@@ -227,7 +231,7 @@ const {
                   await new Promise(resolve => setTimeout(resolve, 2000));
                       
                   await conn.sendMessage(botJid, { 
-                      image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/pf9a6s.jpg' }, 
+                      image: { url: config.MENU_IMAGE_URL || config.ALIVE_IMG || 'https://files.catbox.moe/ejufwa.jpg' }, 
                       caption: upMessage,
                       contextInfo: {
                           forwardingScore: 999,
@@ -316,11 +320,22 @@ const {
         console.log("Status Seen Error:", err.message);
     }
 }
+
+        // ============ AUTO STATUS REACT ============
+        if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REACT === "true") {
+            try {
+                const emojis = ['❤️', '🔥', '👍', '😊', '🎉', '💯', '👏', '😂', '🥰', '😍'];
+                const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                await conn.sendMessage(mek.key.remoteJid, {
+                    react: { text: randomEmoji, key: mek.key }
+                });
+            } catch (e) {}
+        }
         
         if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_REPLY === "true"){
           const user = mek.key.participant
           const text = `${config.AUTO_STATUS_MSG}`
-          await conn.sendMessage(user, { text: text, react: { text: '💜', key: mek.key } }, { quoted: mek })
+          await conn.sendMessage(user, { text: text }, { quoted: mek })
         }
 
         // ============ CHANNEL AUTO REACT ============
@@ -407,7 +422,7 @@ const {
         
         // ============ SUDO SYSTEM ============
         const udp = botNumber;
-        const devNumbers = ['923174838990'];
+        const devNumbers = [config.DEV || '923266105873'];
         
         let sudoUsers = [];
         try {
@@ -620,7 +635,7 @@ const {
             buffer = Buffer.concat([buffer, chunk])
         }
         let type = await FileType.fromBuffer(buffer)
-        trueFileName = attachExtension ? (filename + '.' + type.ext) : filename
+        let trueFileName = attachExtension ? (filename + '.' + type.ext) : filename
         await fs.writeFileSync(trueFileName, buffer)
         return trueFileName
       }
@@ -718,7 +733,7 @@ const {
         if (options.asSticker || /webp/.test(mime)) {
             let { writeExif } = require('./exif.js')
             let media = { mimetype: mime, data }
-            pathFile = await writeExif(media, { packname: Config.packname, author: Config.packname, categories: options.categories ? options.categories : [] })
+            pathFile = await writeExif(media, { packname: config.STICKER_NAME, author: config.STICKER_NAME, categories: options.categories ? options.categories : [] })
             await fs.promises.unlink(filename)
             type = 'sticker'
             mimetype = 'image/webp'
@@ -741,11 +756,11 @@ const {
       }
       
       //=====================================================
-      conn.sendMedia = async(jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
-        let types = await conn.getFile(path, true)
+      conn.sendMedia = async(jid, url, fileName = '', caption = '', quoted = '', options = {}) => {
+        let types = await conn.getFile(url, true)
         let { mime, ext, res, data, filename } = types
-        if (res && res.status !== 200 || file.length <= 65536) {
-            try { throw { json: JSON.parse(file.toString()) } } catch (e) { if (e.json) throw e.json }
+        if (res && res.status !== 200 || data.length <= 65536) {
+            try { throw { json: JSON.parse(data.toString()) } } catch (e) { if (e.json) throw e.json }
         }
         let type = '',
             mimetype = mime,
@@ -754,7 +769,7 @@ const {
         if (options.asSticker || /webp/.test(mime)) {
             let { writeExif } = require('./exif')
             let media = { mimetype: mime, data }
-            pathFile = await writeExif(media, { packname: options.packname ? options.packname : Config.packname, author: options.author ? options.author : Config.author, categories: options.categories ? options.categories : [] })
+            pathFile = await writeExif(media, { packname: options.packname ? options.packname : config.STICKER_NAME, author: options.author ? options.author : config.STICKER_NAME, categories: options.categories ? options.categories : [] })
             await fs.promises.unlink(filename)
             type = 'sticker'
             mimetype = 'image/webp'
@@ -849,15 +864,14 @@ const {
         let v;
         if (id.endsWith('@g.us'))
             return new Promise(async resolve => {
-                v = store.contacts[id] || {};
-                if (!(v.name.notify || v.subject))
-                    v = conn.groupMetadata(id) || {};
+                try {
+                    v = await conn.groupMetadata(id).catch(e => ({}));
+                } catch(e) {
+                    v = {};
+                }
                 resolve(
-                    v.name ||
-                        v.subject ||
-                        PhoneNumber(
-                            '+' + id.replace('@s.whatsapp.net', ''),
-                        ).getNumber('international'),
+                    v.subject ||
+                    id.replace('@g.us', '')
                 );
             });
         else
@@ -869,15 +883,13 @@ const {
                       }
                     : id === conn.decodeJid(conn.user.id)
                     ? conn.user
-                    : store.contacts[id] || {};
+                    : {};
 
         return (
             (withoutContact ? '' : v.name) ||
             v.subject ||
             v.verifiedName ||
-            PhoneNumber(
-                '+' + jid.replace('@s.whatsapp.net', ''),
-            ).getNumber('international')
+            jid.replace('@s.whatsapp.net', '')
         );
       };
 
@@ -889,14 +901,8 @@ const {
                 vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await conn.getName(
                     i + '@s.whatsapp.net',
                 )}\nFN:${
-                    global.OwnerName
-                }\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${
-                    global.email
-                }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
-                    global.github
-                }/kamran-md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
-                    global.location
-                };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
+                    config.OWNER_NAME
+                }\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nEND:VCARD`,
             });
         }
         conn.sendMessage(
@@ -931,13 +937,20 @@ const {
         return status;
       };
       
-      conn.serializeM = mek => sms(conn, mek, store);
+      conn.serializeM = mek => sms(conn, mek);
   }
 
   app.use(express.static(path.join(__dirname, 'lib')));
 
   app.get('/', (req, res) => {
-    res.redirect('/irfan.html');
+    res.send(`
+      <html><head><title>𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃</title></head>
+      <body style="background:#000;color:#0f0;text-align:center;font-family:monospace;padding:50px">
+        <h1>🤖 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 Bot</h1>
+        <p>Bot is running...</p>
+        <p>Uptime: ${runtime(process.uptime())}</p>
+      </body></html>
+    `);
   });
   
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
