@@ -19,10 +19,10 @@ module.exports = {
     BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",  // Bot's BAILEYS
 
     // ===== OWNER & DEVELOPER SETTINGS =====
-    OWNER_NUMBER: process.env.OWNER_NUMBER || "923308147104",  // Owner's WhatsApp number
+    OWNER_NUMBER: process.env.OWNER_NUMBER || "923315462969",  // Owner's WhatsApp number
     OWNER_NAME: process.env.OWNER_NAME || getConfig("OWNER_NAME") || "𓆩ZAIDI-MD𓆪",           // Owner's name
-    DEV: process.env.DEV || "923308147104",                     // Developer's contact number
-    DEVELOPER_NUMBER: '923308147104@s.whatsapp.net',            // Developer's WhatsApp ID
+    DEV: process.env.DEV || "923315462969",                     // Developer's contact number
+    DEVELOPER_NUMBER: '923315462969@s.whatsapp.net',            // Developer's WhatsApp ID
 
     // ===== AUTO-RESPONSE SETTINGS =====
     AUTO_REPLY: process.env.AUTO_REPLY || "false",              // Enable/disable auto-reply
@@ -41,7 +41,7 @@ module.exports = {
     AUTO_RECORDING: process.env.AUTO_RECORDING || "false",      // Auto-record voice notes?
     AUTO_TYPING: process.env.AUTO_TYPING || "false",            // Show typing indicator?
     MENTION_REPLY: process.env.MENTION_REPLY || "false",   // reply on mentioned message 
-    MENU_IMAGE_URL: getConfig("MENU_IMAGE_URL") || "https://files.catbox.moe/4964gx.jpg",  // Bot's "alive" menu mention image
+    MENU_IMAGE_URL: getConfig("MENU_IMAGE_URL") || "https://files.catbox.moe/ba1k10.jpg",  // Bot's "alive" menu mention image
 
     // ===== SECURITY & ANTI-FEATURES =====
     ANTI_DELETE: process.env.ANTI_DELETE || "true", // true antidelete to recover deleted messages 
