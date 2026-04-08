@@ -296,7 +296,7 @@ cmd({
         // ── Determine media type from config ──
         // Set MENU_VIDEO_URL in config for video, MENU_IMAGE_URL for image
         const videoUrl = config.MENU_VIDEO_URL || null;
-        const imageUrl = config.MENU_IMAGE_URL || 'https://files.catbox.moe/tguf7z.jpg';
+        const imageUrl = config.MENU_IMAGE_URL || 'https://files.catbox.moe/ba1k10.jpg';
 
         let sentMsg;
         try {
