@@ -1,8 +1,8 @@
 {
-  "name": "ANAYAT-AI",
+  "name": "𓆩ZAIDI-MD𓆪",
   "description": "Javascript WhatsApp bot made by 𝙰𝙽𝙰𝚈𝙰𝚃-𝙷𝙰𝙲𝙺𝙴𝚁",
-  "logo": "https://files.catbox.moe/adhn5v.jpg",
-  "keywords": ["ANAYAT-AI"],
+  "logo": "https://files.catbox.moe/ba1k10.jpg",
+  "keywords": ["𓆩ZAIDI-MD𓆪"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "ANAYAT-AI"
+      "value": "ZAIDI-MD~"
     }, 
       
     "PREFIX": {
@@ -78,20 +78,20 @@
     "AUTO_STATUS_MSG": {
       "description": "Type custom message on status reply",
       "required": true,
-      "value": "*SEEN YOUR STATUS BY ANAYAT-AI 🖤*"
+      "value": "*SEEN YOUR STATUS BY 𓆩ZAIDI-MD𓆪 🖤*"
    
      }, 
     
     "OWNER_NAME": {
       "description": "Type Bot Owner Name.",
       "required": false,
-      "value": "𝙰𝙽𝙰𝚈𝙰𝚃-𝙷𝙰𝙲𝙺𝙴𝚁"
+      "value": "𓆩ZAIDI-MD𓆪"
 }, 
 
     "OWNER_NUMBER": {
       "description": "put the owner number for bot.",
       "required": false,
-      "value": "92345"
+      "value": "923315462969"
 
     }, 
 
@@ -131,13 +131,13 @@
     "MENU_IMAGE_URL": {
       "description": "add url for mention reply and menu if want.",
       "required": false,
-      "value": "https://files.catbox.moe/adhn5v.jpg"
+      "value": "https://files.catbox.moe/ba1k10.jpg"
     },
     
      "DESCRIPTION": {
       "description": "add caption for menu and other",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝙰𝙽𝙰𝚈𝙰𝚃-𝙰𝙸*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐙͢͠꧊𝛂͜ı֟፝𝛛֟ı֟፝ 𝐓𝚵〆͎𝐊*"
     },
 
       "DELETE_LINKS": {
