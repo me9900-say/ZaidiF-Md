@@ -16,7 +16,7 @@
                font-size: 45px; 
                font-weight: bold;">
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    ✨ 𓆩ZAIDI-MD✨
+    ✨𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪✨
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
@@ -54,13 +54,36 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🚀 𝘿𝙀𝙋𝙇𝙊𝙔 𝙉𝙊𝙒
 <p align="center">
+  <!-- Heroku -->
   <a href="https://dashboard.heroku.com/new?template=https://github.com/me9900-say/ZaidiF-Md">
     <img src="https://img.shields.io/badge/Deploy-Heroku-7952B3?style=for-the-badge&logo=heroku&logoColor=white" />
   </a>
+
+  <!-- Railway -->
+  <a href="https://railway.app/new/template?template=https://github.com/me9900-say/ZaidiF-Md">
+    <img src="https://img.shields.io/badge/Deploy-Railway-000000?style=for-the-badge&logo=railway&logoColor=white" />
+  </a>
+
+  <!-- Render -->
+  <a href="https://render.com/deploy?repo=https://github.com/me9900-say/ZaidiF-Md">
+    <img src="https://img.shields.io/badge/Deploy-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
+  </a>
+
+  <!-- Koyeb -->
+  <a href="https://app.koyeb.com/deploy?type=git&repository=https://github.com/me9900-say/ZaidiF-Md">
+    <img src="https://img.shields.io/badge/Deploy-Koyeb-121212?style=for-the-badge&logo=koyeb&logoColor=white" />
+  </a>
+
+  <!-- Replit -->
+  <a href="https://replit.com/github/me9900-say/ZaidiF-Md">
+    <img src="https://img.shields.io/badge/Deploy-Replit-F26207?style=for-the-badge&logo=replit&logoColor=white" />
+  </a>
 </p>
-<p align="center">⚡ Deploy your bot on <b>Heroku</b> easily.</p>
+
+<p align="center">⚡ Deploy your bot on any platform easily.</p>
 
 ---
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 📡 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙎
