@@ -42,16 +42,10 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🔑 𝙂𝙀𝙏 𝙎𝙀𝙎𝙎𝙄𝙊𝙉
 <p align="center">
-  <a href="https://fzi-47d2ff678688.herokuapp.com/pair">
-<p align="center">
-  <a href="https://paring-site-2-0yzl.onrender.com/pair">
-    <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  <a href="https://zaidipair-md.onrender.com/pair">
+    <img src="https://img.shields.io/badge/PAIR%20NOW-SESSION%20GENERATOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
-<p align="center">📲 Click above button to generate your <b>Session ID</b> (required for deployment).</p>
-
----
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🚀 𝘿𝙀𝙋𝙇𝙊𝙔 𝙉𝙊𝙒
 <p align="center">
   <!-- Heroku -->
