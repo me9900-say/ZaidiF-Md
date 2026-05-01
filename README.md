@@ -1,7 +1,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-# 〘 𓆩ZAIDI-MD 〙  
+# 〘 𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 〙  
 > ✨ *Ultra Pro Max WhatsApp Bot* ✨  
 <a href="https://github.com/me9900-say/ZaidiF-Md"><img title="Author" src="https://img.shields.io/badge/𓆩ZAIDI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923315462969"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
@@ -43,9 +43,15 @@
 ## 🔑 𝙂𝙀𝙏 𝙎𝙀𝙎𝙎𝙄𝙊𝙉
 <p align="center">
   <a href="https://zaidipair-md.onrender.com/pair">
-    <img src="https://img.shields.io/badge/PAIR%20NOW-SESSION%20GENERATOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+    <img src="https://img.shields.io/badge/Get-Session_ID-00BFFF?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
+
+<p align="center">📲 Click above button to generate your <b>Session ID</b> (required for deployment).</p>
+
+---
+
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 ## 🚀 𝘿𝙀𝙋𝙇𝙊𝙔 𝙉𝙊𝙒
 <p align="center">
   <!-- Heroku -->
